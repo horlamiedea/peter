@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View, ListView
-from .models import Event, New, Sermon , Contact
+from .models import Event, New, Sermon , Contact, FirstTimer
+from . forms import  VisitorForm
 from django.core.paginator import Paginator
 from django.contrib import messages
 
@@ -54,6 +55,14 @@ class EventView(ListView):
     model = Event
     template_name = 'events.html'
     
-def visit(request):
-    return render(request, 'visitors.html')
+# def visit(request):
+#     return render(request, 'visitors.html')
     
+    
+class VisitorView(View):
+    def get(self, *args, **kwargs):
+        form =  VisitorForm()
+        context = {
+            'form': form
+        }
+        return render(self.request, 'visitors.html', context)

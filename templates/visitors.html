@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 <main class="main-content">
 <div class="fullwidth-block">
 	<div class="container">
-<form>
-  <div class="input-group">
+  <form>
+    {{ form }}
+  </form>
+  </div>
+</div>
+
+</main>
+
+{% endblock content %}
+
+
+<div class="input-group">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">First and last name</span>
   </div>
@@ -83,8 +94,3 @@
   <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
   </div>
-</form>
-</main>
-</div>
-</div>
-{% endblock content %}
