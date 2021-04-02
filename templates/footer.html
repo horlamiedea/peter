@@ -28,14 +28,15 @@
 						<div class="col-md-4">
 							<div class="widget">
 								<h3 class="widget-title">Contact form</h3>
-								<form action="#" class="contact-form">
+								<form action="" method="post" class="contact-form">
+								{% csrf_token %}
 									<div class="row">
-										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
-										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
+										<div class="col-md-6"><input type="text" name='name' placeholder="Your name..."></div>
+										<div class="col-md-6"><input type="text" name='email' placeholder="Email..."></div>
 									</div>
 									
-									<textarea name="" placeholder="Your message..."></textarea>
-									<div class="text-right"><input type="submit" value="Send message"></div>
+									<textarea name="message" placeholder="Your message..."></textarea>
+									<div class="text-right"><input type="submit" name="submit" value="Send message"></div>
 									
 								</form>
 							</div>
