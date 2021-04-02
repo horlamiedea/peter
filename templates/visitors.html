@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="main-content">
+<div class="fullwidth-block">
+	<div class="container">
+<form>
+  <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">First and last name</span>
+  </div>
+  <input type="name" class="form-control" placeholder="Olamide">
+  <input type="name" class="form-control" placeholder="Ajayi">
+</div>
+  <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">Email and Phone Number</span>
+  </div>
+  <input type="email" class="form-control" placeholder="olamide@gmail.com">
+  <input type="text" class="form-control" placeholder="08172667174">
+</div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="House 4, behind bovas">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" placeholder="Abuja" class="form-control" id="inputCity">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option disabled selected>--Select State--</option>
+    <option value="Abia">Abia</option>
+    <option value="Adamawa">Adamawa</option>
+    <option value="Akwa Ibom">Akwa Ibom</option>
+    <option value="Anambra">Anambra</option>
+    <option value="Bauchi">Bauchi</option>
+    <option value="Bayelsa">Bayelsa</option>
+    <option value="Benue">Benue</option>
+    <option value="Borno">Borno</option>
+    <option value="Cross Rive">Cross River</option>
+    <option value="Delta">Delta</option>
+    <option value="Ebonyi">Ebonyi</option>
+    <option value="Edo">Edo</option>
+    <option value="Ekiti">Ekiti</option>
+    <option value="Enugu">Enugu</option>
+    <option value="FCT">Federal Capital Territory</option>
+    <option value="Gombe">Gombe</option>
+    <option value="Imo">Imo</option>
+    <option value="Jigawa">Jigawa</option>
+    <option value="Kaduna">Kaduna</option>
+    <option value="Kano">Kano</option>
+    <option value="Katsina">Katsina</option>
+    <option value="Kebbi">Kebbi</option>
+    <option value="Kogi">Kogi</option>
+    <option value="Kwara">Kwara</option>
+    <option value="Lagos">Lagos</option>
+    <option value="Nasarawa">Nasarawa</option>
+    <option value="Niger">Niger</option>
+    <option value="Ogun">Ogun</option>
+    <option value="Ondo">Ondo</option>
+    <option value="Osun">Osun</option>
+    <option value="Oyo">Oyo</option>
+    <option value="Plateau">Plateau</option>
+    <option value="Rivers">Rivers</option>
+    <option value="Sokoto">Sokoto</option>
+    <option value="Taraba">Taraba</option>
+    <option value="Yobe">Yobe</option>
+    <option value="Zamfara">Zamfara</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="form-group col-md-3">
+    <label for="exampleFormControlTextarea1">Tell Us About You</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+  </div>
+  <div class="form-group">
+  <div class="form-group col-md-12">
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+  </div>
+</form>
+</main>
+</div>
+</div>
+{% endblock content %}

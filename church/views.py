@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View, ListView
 from .models import Event, New, Sermon , Contact
 from django.core.paginator import Paginator
+from django.contrib import messages
 
 # Create your views here.
 
@@ -35,7 +36,8 @@ class Home(View):
 
             c = Contact(name=name_r, email=email_r, message=message_r)
             c.save()
-            return render(self.request, 'index.html')
+            messages.success(self.request, "Your message has been sent successfully, Please wait while we get back to you")
+            return redirect('home')
     
 
 
@@ -51,4 +53,7 @@ class SermonView(ListView):
 class EventView(ListView):
     model = Event
     template_name = 'events.html'
+    
+def visit(request):
+    return render(request, 'visitors.html')
     
