@@ -61,8 +61,29 @@ class EventView(ListView):
     
 class VisitorView(View):
     def get(self, *args, **kwargs):
-        form =  VisitorForm()
-        context = {
-            'form': form
-        }
-        return render(self.request, 'visitors.html', context)
+        return render(self.request, 'visitors.html')
+    def post(self, *args, **kwargs):
+        if self.request.method == 'POST':
+            name = self.request.POST.get('first_name')
+            name_r = self.request.POST.get('last_name')
+            email = self.request.POST.get('email')
+            phone = self.request.POST.get('phone_number')
+            address = self.request.POST.get('address')
+            city = self.request.POST.get('city')
+            state = self.request.POST.get('state')
+            about = self.request.POST.get('about_you')
+            
+            collect = FirstTimer()
+            collect.first_name = name
+            collect.last_name = name_r
+            collect.email = email
+            collect.phone_number = phone
+            collect.address = address
+            collect.city = city
+            collect.state = state
+            collect.about_you = about
+            collect.save()
+            
+            messages.success(self.request, "Your message has been sent successfully, Please wait while we get back to you")
+            return redirect('home')
+        
