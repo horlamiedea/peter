@@ -84,6 +84,6 @@ class VisitorView(View):
             collect.about_you = about
             collect.save()
             
-            messages.success(self.request, "Your message has been sent successfully, Please wait while we get back to you")
+            messages.success(self.request, f"Welcome to Our Church {name} {name_r}. We have appointed a host to you, The host will get accross to you very soon")
             return redirect('home')
         

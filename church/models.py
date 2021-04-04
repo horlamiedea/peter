@@ -44,8 +44,8 @@ class FirstTimer(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
     phone_number = models.CharField(max_length=20)
-    address = models.TextField()
-    city = models.TextField()
+    address = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
     state = models.CharField(max_length=100)
     about_you = models.TextField()
     
